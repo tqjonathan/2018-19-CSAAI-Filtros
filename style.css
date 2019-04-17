@@ -3,3 +3,7 @@ body{
   font-weight: bold;
   color: blue;
 }
+
+#img_original {
+  display:none;
+}

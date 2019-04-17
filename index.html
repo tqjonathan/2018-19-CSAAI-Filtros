@@ -8,7 +8,13 @@
   </head>
   <body onload="main();">
     <p>Imagen Original</p>
-    <img src="black-hole.jpg" id="img-original">
+    <img src="black-hole.jpg" id="img_original"><br>
+    <input type="range" id="deslizador_R" min="0" max="255" value="255"/>R
+    <p id="display_R"></p><br>
+    <input type="range" id="deslizador_G" min="0" max="255" value="255"/>G
+    <p id="display_G"></p><br>
+    <input type="range" id="deslizador_B" min="0" max="255" value="255"/>B
+    <p id="display_B"></p><br>
     <p>Imagen Procesada</p>
     <canvas id="display""></canvas>
   </body>
