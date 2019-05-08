@@ -12,8 +12,8 @@ function main() {
   Azul = document.getElementById('Azul')
   //-- Valores RGB
   R_value = document.getElementById('R_value');
-  G_value = document.getElementById('G_value');
-  B_value = document.getElementById('B_value');
+  V_value = document.getElementById('V_value');
+  A_value = document.getElementById('A_value');
 
   // Tamaño canvas = imagen
   canvas.width = img.width;
@@ -60,7 +60,7 @@ function main() {
     ctx.putImageData(imgData, 0, 0);
   }
   Verde.oninput = () => {
-    G_value.innerHTML = Verde.value
+    V_value.innerHTML = Verde.value
     ctx.drawImage(img, 0,0);
     var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var data = imgData.data
@@ -68,7 +68,7 @@ function main() {
     ctx.putImageData(imgData, 0, 0);
   }
   Azul.oninput = () => {
-    B_value.innerHTML = Azul.value
+    A_value.innerHTML = Azul.value
     ctx.drawImage(img, 0,0);
     var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var data = imgData.data
