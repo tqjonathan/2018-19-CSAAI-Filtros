@@ -53,7 +53,7 @@ function main() {
     ctx.drawImage(img, 0,0);
     var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    //-- Obtener el array con todos los píxeles
+    //Obtener el array con todos los píxeles
     var data = imgData.data
     print_img(data);
     //-- Poner la imagen modificada en el canvas
