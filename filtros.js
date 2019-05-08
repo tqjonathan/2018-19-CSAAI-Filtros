@@ -10,6 +10,7 @@ function main() {
   Rojo = document.getElementById('Rojo')
   Verde = document.getElementById('Verde')
   Azul = document.getElementById('Azul')
+  Gris = document.getElementById('Gris')
   //-- Valores RGB
   R_value = document.getElementById('R_value');
   V_value = document.getElementById('V_value');
@@ -75,4 +76,24 @@ function main() {
     print_img(data)
     ctx.putImageData(imgData, 0, 0);
   }
+
+  Gris.onclick=()=>{
+      var imgDataGris = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      //-- Obtener el array con todos los píxeles
+      var data = imgDataGris.data;
+      //-- Filtrar la imagen según el nuevo umbral
+      for (var i = 0; i < data.length; i+=4) {
+        var R = data[i];
+        var V = data[i+1];
+        var A = data[i+2];
+        // CIE luminance for the RGB
+        // The human eye is bad at seeing red and blue, so we de-emphasize them.
+        var Brillo = (3*R + 4*V + A)/8;
+        data[i] = data[i+1] = data[i+2] = Brillo
+        }
+        ctx.putImageData(imgDataGris, 0, 0);
+}
+
+
+
 }
