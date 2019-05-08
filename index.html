@@ -2,20 +2,20 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Filtros</title>
+    <title>Filtro 1</title>
     <link rel="stylesheet" href="style.css">
     <script src="filtros.js"></script>
   </head>
   <body onload="main();">
-    <p>Imagen Original</p>
-    <img src="black-hole.jpg" id="img_original"><br>
-    <input type="range" id="deslizador_R" min="0" max="255" value="255"/>R
-    <p id="display_R"></p><br>
-    <input type="range" id="deslizador_G" min="0" max="255" value="255"/>G
-    <p id="display_G"></p><br>
-    <input type="range" id="deslizador_B" min="0" max="255" value="255"/>B
-    <p id="display_B"></p><br>
-    <p>Imagen Procesada</p>
-    <canvas id="display""></canvas>
+    <p>Imagen original</p>
+    <img src="black-hole.jpg" id="imagesrc">
+    <p>Imagen modificada</p>
+    <canvas id="display"></canvas><br>
+    <input type="range" id="Rojo" min="0" max="255" value="255">Rojo
+    <p id="R_value">255</p>
+    <input type="range" id="Verde" min="0" max="255" value="255"/>Verde
+    <p id="G_value">255</p>
+    <input type="range" id="Azul" min="0" max="255" value="255"/>Azul
+    <p id="B_value">255</p>
   </body>
 </html>
